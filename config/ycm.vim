@@ -28,7 +28,7 @@ let g:ycm_warning_symbol = '>>'
 let g:ycm_cache_omnifunc=0
 
 " List 选择的快捷键
-let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
+let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>']
 let g:ycm_key_list_stop_completion = ['<C-y>']
 let g:ycm_key_invoke_completion = '<C-Space>'

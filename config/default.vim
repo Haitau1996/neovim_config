@@ -5,8 +5,8 @@
     set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
     set langmenu=zh_CN.UTF-8
     set termencoding=utf-8
+    let $my_vimdir = $localappdata.'\nvim'
 
-let $my_vimdir = $localappdata.'\nvim'
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "  basic setting for indent tab and etc. "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
@@ -20,7 +20,6 @@ let $my_vimdir = $localappdata.'\nvim'
     set mouse=a
     set nocompatible
     set nu
-    set paste
     set relativenumber
     set ruler 
     set shiftwidth=4
@@ -34,8 +33,9 @@ let $my_vimdir = $localappdata.'\nvim'
     let g:airline_powerline_fonts = 1 
 
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-"   设置 swap 文件的位置和 vim info 文件信息
+"   设置 swap 文件的位置
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    set dir=$my_vimdir\swap
 
 " enable auto format
         nnoremap <F6> :Autoformat<CR>
@@ -115,6 +115,9 @@ func! CompileRunGcc()
         elseif &filetype == 'java'
                 exec "!javac %"
                 exec "!java %<"
+        elseif &filetype == 'rust'
+                exec "!rustc % -o %<.exe"
+                exec "!\%<.exe"
         endif
 endfunc
 
@@ -137,5 +140,5 @@ endfunc
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "    github coplilot
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-	imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-	let g:copilot_no_tab_map = v:true
+"	imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+"	let g:copilot_no_tab_map = v:true
