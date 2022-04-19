@@ -32,3 +32,6 @@ let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>']
 let g:ycm_key_list_stop_completion = ['<C-y>']
 let g:ycm_key_invoke_completion = '<C-Space>'
+
+" 消除头文件搜索报错： maximum number of diagnostics exceeded
+let g:ycm_max_diagnostics_to_display = 0
