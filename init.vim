@@ -6,7 +6,6 @@ call plug#begin('$my_vimdir/plugged')
 
     Plug 'Chiel92/vim-autoformat'
     Plug 'bfrg/vim-cpp-modern'
-    Plug 'dense-analysis/ale'
     Plug 'easymotion/vim-easymotion'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'github/copilot.vim'
