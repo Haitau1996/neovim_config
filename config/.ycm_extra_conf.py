@@ -10,7 +10,7 @@ flags = [
   '-fexceptions',
   '-DNDEBUG',
   '-xc++',
-  '-std=c++20',
+  '-std=c++17',
   # generate by the commmand gcc -v -x c -E /dev/null
   '-isystem','C:/tools/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include',
   '-isystem','C:/tools/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include',

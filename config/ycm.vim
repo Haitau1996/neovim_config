@@ -3,7 +3,7 @@ let $my_vimdir = $localappdata.'\nvim'
 let g:ycm_keep_logfiles = 1
 let g:ycm_log_level = 'error'
 let g:ycm_global_ycm_extra_conf='$my_vimdir\config\.ycm_extra_conf.py'
-let g:ycm_use_clangd = 0
+let g:ycm_use_clangd = 1
 
 
 let &rtp .= ',' . expand( '<sfile>:p:h' )
@@ -22,8 +22,8 @@ let g:ycm_max_num_candidates = 30
 let g:ycm_autoclose_preview_window_after_completion=1
 
 "  error 和 warmming 符号
-let g:ycm_error_symbol = '>!'
-let g:ycm_warning_symbol = '>>'
+let g:ycm_error_symbol = '●'
+let g:ycm_warning_symbol = '.'
 " 禁止缓存匹配项,每次都重新生成匹配项"
 let g:ycm_cache_omnifunc=0
 

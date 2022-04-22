@@ -15,6 +15,7 @@ call plug#begin('$my_vimdir/plugged')
     Plug 'kien/rainbow_parentheses.vim'
     Plug 'luochen1990/rainbow'
     Plug 'rust-lang/rust.vim'
+    Plug 'sakshamgupta05/vim-todo-highlight'
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'skywind3000/quickmenu.vim'
     Plug 'tpope/vim-fugitive'

@@ -142,3 +142,18 @@ endfunc
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "	imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 "	let g:copilot_no_tab_map = v:true
+
+    let g:todo_highlight_config = {
+          \ 'todo': {
+          \     'gui_fg_color': '#00ff00',
+          \     'gui_bg_color': '#ff0000',
+          \     'cterm_fg_color': 'red',
+          \     'cterm_bg_color': '214'
+          \ },
+          \   'NOTE': {
+          \     'gui_fg_color': '#ffffff',
+          \     'gui_bg_color': '#ffbd2a',
+          \     'cterm_fg_color': 'white',
+          \     'cterm_bg_color': '214'
+          \   }
+          \ }
