@@ -101,6 +101,19 @@
     \}
 
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+"   设置 C++ 代码的高亮
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    " Disable function highlighting (affects both C and C++ files)
+    let g:cpp_function_highlight = 0
+    " Enable highlighting of C++11 attributes
+    let g:cpp_attributes_highlight = 1
+    " Highlight struct/class member variables (affects both C and C++ files)
+    let g:cpp_member_highlight = 1
+    " Put all standard C and C++ keywords under Vim's highlight group 'Statement'
+    " (affects both C and C++ files)
+    let g:cpp_simple_highlight = 1
+
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "   设置 按 F5 自动编译
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 map <F5> :call CompileRunGcc()<CR>
@@ -144,12 +157,7 @@ endfunc
 "	let g:copilot_no_tab_map = v:true
 
     let g:todo_highlight_config = {
-          \ 'todo': {
-          \     'gui_fg_color': '#00ff00',
-          \     'gui_bg_color': '#ff0000',
-          \     'cterm_fg_color': 'red',
-          \     'cterm_bg_color': '214'
-          \ },
+          \ 'todo': {},
           \   'NOTE': {
           \     'gui_fg_color': '#ffffff',
           \     'gui_bg_color': '#ffbd2a',

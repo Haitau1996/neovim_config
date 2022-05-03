@@ -16,8 +16,8 @@ let g:ycm_complete_in_strings=1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 
 "  开始补全的字符数和候选个数
-let g:ycm_min_num_of_chars_for_completion=3
-let g:ycm_max_num_candidates = 30
+let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_max_num_candidates = 20
 "补全后自动关机预览窗口"
 let g:ycm_autoclose_preview_window_after_completion=1
 
