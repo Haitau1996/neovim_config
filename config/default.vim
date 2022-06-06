@@ -150,11 +150,6 @@ endfunc
 " (affects both C and C++ files)
     let g:cpp_simple_highlight = 1
 
-"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-"    github coplilot
-"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-"	imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-"	let g:copilot_no_tab_map = v:true
 
     let g:todo_highlight_config = {
           \ 'todo': {},
