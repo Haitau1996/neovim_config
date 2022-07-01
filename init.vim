@@ -8,7 +8,7 @@ call plug#begin('$my_vimdir/plugged')
     Plug 'bfrg/vim-cpp-modern'
     Plug 'easymotion/vim-easymotion'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-    Plug 'github/copilot.vim'
+    Plug 'github/copilot.vim' 
     Plug 'jiangmiao/auto-pairs'
     Plug 'junegunn/vim-easy-align'
     Plug 'kien/ctrlp.vim'
