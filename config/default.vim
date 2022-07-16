@@ -114,7 +114,7 @@
     let g:cpp_simple_highlight = 1
 
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-"   设置 按 F5 自动编译
+"   设置 按 F5 自动编译 && 启动调试
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
@@ -131,6 +131,19 @@ func! CompileRunGcc()
         elseif &filetype == 'rust'
                 exec "!rustc % -o %<.exe"
                 exec "!\%<.exe"
+        endif
+endfunc
+
+
+map <F7> :call CompileDebugGcc()<CR>
+func! CompileDebugGcc()
+        exec "w"
+        if &filetype == 'c'
+                exec "!clang % -o %<.exe"
+                exec "!gdb %<.exe"
+        elseif &filetype == 'cpp'
+                exec "!g++ % -o %<.exe"
+                exec "!gdb %<.exe"
         endif
 endfunc
 
@@ -165,3 +178,8 @@ endfunc
           \     'cterm_bg_color': '214'
           \   }
           \ }
+
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+"  basic setting for indent line plugin
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']

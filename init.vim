@@ -3,7 +3,6 @@ source $my_vimdir\config\default.vim
 source $my_vimdir\config\ycm.vim
 
 call plug#begin('$my_vimdir/plugged')
-
     Plug 'Chiel92/vim-autoformat'
     Plug 'bfrg/vim-cpp-modern'
     Plug 'easymotion/vim-easymotion'
@@ -23,5 +22,5 @@ call plug#begin('$my_vimdir/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'vim-jp/vim-cpp'
     Plug 'ycm-core/YouCompleteMe'
-
+    Plug 'yggdroot/indentline'
 call plug#end()

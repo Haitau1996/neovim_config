@@ -1,3 +1,4 @@
 plugged/*
 swap/*
 config/viminfo
+autoload/
