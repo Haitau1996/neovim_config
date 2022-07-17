@@ -14,6 +14,7 @@ flags = [
     # generate by the command gcc -v -x c -E /dev/null
     '-isystem','include',
     '-isystem','C:/tools/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/include',
+    '-isystem','C:/tools/msys64/mingw64/include/c++/12.1.0'
     '-isystem','C:/tools/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../include',
     '-isystem','C:/tools/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/include-fixed',
 ]

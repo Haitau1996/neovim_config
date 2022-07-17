@@ -3,7 +3,7 @@ let $my_vimdir = $localappdata.'\nvim'
 let g:ycm_keep_logfiles = 1
 let g:ycm_log_level = 'error'
 let g:ycm_global_ycm_extra_conf='$my_vimdir\config\.ycm_extra_conf.py'
-let g:ycm_use_clangd = 1
+let g:ycm_use_clangd = 0
 
 
 let &rtp .= ',' . expand( '<sfile>:p:h' )

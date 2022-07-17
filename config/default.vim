@@ -163,23 +163,18 @@ endfunc
 " (affects both C and C++ files)
     let g:cpp_simple_highlight = 1
 
-
     let g:todo_highlight_config = {
-          \ 'todo': {
-          \     'gui_fg_color': '#ffffff',
-          \     'gui_bg_color': '#ffbd2a',
-          \     'cterm_fg_color': 'white',
-          \     'cterm_bg_color': '214'
-          \   },
-          \   'NOTE': {
-          \     'gui_fg_color': '#ffffff',
-          \     'gui_bg_color': '#ffbd2a',
-          \     'cterm_fg_color': 'white',
-          \     'cterm_bg_color': '214'
-          \   }
-          \ }
+		\ 'todo': {
+		\  },
+		\   'NOTE': {
+		\     'gui_fg_color': '#ffffff',
+		\     'gui_bg_color': '#ffbd2a',
+		\     'cterm_fg_color': 'white',
+		\     'cterm_bg_color': '214'
+		\   }
+		\ }
 
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "  basic setting for indent line plugin
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+	let g:indentLine_char_list = ['|', '¦', '┆', '┊','⎸']
