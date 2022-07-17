@@ -6,12 +6,12 @@ call plug#begin('$my_vimdir/plugged')
     Plug 'Chiel92/vim-autoformat'
     Plug 'bfrg/vim-cpp-modern'
     Plug 'easymotion/vim-easymotion'
+    Plug 'ervandew/supertab'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'github/copilot.vim' 
     Plug 'jiangmiao/auto-pairs'
     Plug 'junegunn/vim-easy-align'
     Plug 'kien/ctrlp.vim'
-    Plug 'kien/rainbow_parentheses.vim'
     Plug 'luochen1990/rainbow'
     Plug 'rust-lang/rust.vim'
     Plug 'sakshamgupta05/vim-todo-highlight'

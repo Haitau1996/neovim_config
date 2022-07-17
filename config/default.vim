@@ -50,30 +50,6 @@
         autocmd Filetype python set foldlevel=99
 
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-"   彩虹括号 BETTER RAINBOW PARENTHESES
-"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-    let g:rbpt_colorpairs = [
-        \ ['brown',       'RoyalBlue3'],
-        \ ['Darkblue',    'SeaGreen3'],
-        \ ['darkgray',    'DarkOrchid3'],
-        \ ['darkgreen',   'firebrick3'],
-        \ ['darkcyan',    'RoyalBlue3'],
-        \ ['darkred',     'SeaGreen3'],
-        \ ['darkmagenta', 'DarkOrchid3'],
-        \ ['brown',       'firebrick3'],
-        \ ['gray',        'RoyalBlue3'],
-        \ ['darkmagenta', 'DarkOrchid3'],
-        \ ['Darkblue',    'firebrick3'],
-        \ ['darkgreen',   'RoyalBlue3'],
-        \ ['darkcyan',    'SeaGreen3'],
-        \ ['darkred',     'DarkOrchid3'],
-        \ ['red',         'firebrick3'],
-        \ ]
-
-    let g:rbpt_max = 16
-    let g:rbpt_loadcmd_toggle = 1
-
-"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "   设置 RAINBOW PARENTHESES IMPROVED
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
     let g:rainbow_active = 1
@@ -163,6 +139,9 @@ endfunc
 " (affects both C and C++ files)
     let g:cpp_simple_highlight = 1
 
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+"  vim todo highlight config
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
     let g:todo_highlight_config = {
 		\ 'todo': {
 		\  },
