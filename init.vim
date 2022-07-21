@@ -5,6 +5,7 @@ source $my_vimdir\config\ycm.vim
 call plug#begin('$my_vimdir/plugged')
     Plug 'Chiel92/vim-autoformat'
     Plug 'bfrg/vim-cpp-modern'
+    Plug 'dense-analysis/ale'
     Plug 'easymotion/vim-easymotion'
     Plug 'ervandew/supertab'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }

@@ -10,13 +10,8 @@
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "  basic setting for indent tab and etc. "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-    syntax enable
-    syntax on
-    filetype plugin indent on
     set autoindent
     set backspace=indent,eol,start  " make backspaces more powerfull
-    set expandtab  
-    set expandtab  "expand tabs to space essential in python"
     set mouse=a
     set nocompatible
     set nu
@@ -25,7 +20,11 @@
     set shiftwidth=4
     set showcmd                     " show (partial) command in status line
     set softtabstop=4 
-    set ts=4  
+    set tabstop=4  
+    set expandtab  
+    syntax enable
+    syntax on
+    filetype plugin indent on
 
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "  Enable vim-powerline"
@@ -80,7 +79,7 @@
 "   设置 C++ 代码的高亮
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
     " Disable function highlighting (affects both C and C++ files)
-    let g:cpp_function_highlight = 0
+    let g:cpp_function_highlight = 1
     " Enable highlighting of C++11 attributes
     let g:cpp_attributes_highlight = 1
     " Highlight struct/class member variables (affects both C and C++ files)
@@ -156,4 +155,30 @@ endfunc
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "  basic setting for indent line plugin
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-	let g:indentLine_char_list = ['|', '¦', '┆', '┊','⎸']
+    let g:indentLine_char_list = ['|', '¦', '┆', '┊','⎸']
+
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+"  ale config
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+	let g:ale_sign_error = '✗'
+	let g:ale_sign_warning = '⚡'
+	let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
+	let g:ale_linters = {
+	\   'cpp': ['clang','cppcheck','clang-check'],
+	\   'c': ['clang'],
+	\   'python': ['pylint'],
+	\}
+    let g:ale_c_cc_options = '-Wall -Werror -Wextra -std=c11'
+    let g:ale_cpp_cc_options = '-Wall -Werror -Wextra -std=c++17'
+    let g:ale_cpp_clangcheck_executable = 'clang-check'
+    let g:ale_cpp_cppcheck_executable = 'cppcheck'
+    "普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
+	nmap sp <Plug>(ale_previous_wrap)
+	nmap sn <Plug>(ale_next_wrap)
+	"<Leader>s触发/关闭语法检查
+	nmap <Leader>s :ALEToggle<CR>
+	"<Leader>d查看错误或警告的详细信息
+	nmap <Leader>d :ALEDetail<CR>
+    let g:ale_echo_msg_error_str = 'E'
+	let g:ale_echo_msg_warning_str = 'W'
+	let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
