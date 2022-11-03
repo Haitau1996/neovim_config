@@ -1,6 +1,5 @@
-let $my_vimdir = $localappdata.'\nvim'
-source $my_vimdir\config\default.vim
-source $my_vimdir\config\ycm.vim
+let $my_vimdir = '~/.config/nvim'
+source $my_vimdir/config/default.vim
 
 call plug#begin('$my_vimdir/plugged')
     Plug 'Chiel92/vim-autoformat'
@@ -22,6 +21,5 @@ call plug#begin('$my_vimdir/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'vim-jp/vim-cpp'
-    Plug 'ycm-core/YouCompleteMe'
     Plug 'yggdroot/indentline'
 call plug#end()

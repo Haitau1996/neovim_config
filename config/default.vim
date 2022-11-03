@@ -5,7 +5,6 @@
     set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
     set langmenu=zh_CN.UTF-8
     set termencoding=utf-8
-    let $my_vimdir = $localappdata.'\nvim'
 
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "  basic setting for indent tab and etc. "
@@ -34,7 +33,7 @@
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "   设置 swap 文件的位置
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-    set dir=$my_vimdir\swap
+    set dir=/home/chenht/.config/nvim/swap
 
 " enable auto format
         nnoremap <F6> :Autoformat<CR>
