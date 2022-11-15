@@ -13,8 +13,7 @@
     set backspace=indent,eol,start  " make backspaces more powerfull
     set mouse=a
     set nocompatible
-    set nu
-    set relativenumber
+    set number relativenumber  " Hybrid line number on
     set ruler 
     set shiftwidth=4
     set showcmd                     " show (partial) command in status line
