@@ -93,17 +93,17 @@ map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
         exec "w"
         if &filetype == 'c'
-                exec "!clang % -o %<.exe"
-                exec "!\%<.exe"
+                exec "!clang % -o %<"
+                exec "!./%<"
         elseif &filetype == 'cpp'
-                exec "!g++ % -o %<.exe"
-                exec "!\%<.exe"
+                exec "!g++ % -o %<"
+                exec "!./%<"
         elseif &filetype == 'java'
                 exec "!javac %"
                 exec "!java %<"
         elseif &filetype == 'rust'
-                exec "!rustc % -o %<.exe"
-                exec "!\%<.exe"
+                exec "!rustc % -o %<"
+                exec "!./%<"
         endif
 endfunc
 
@@ -112,11 +112,11 @@ map <F7> :call CompileDebugGcc()<CR>
 func! CompileDebugGcc()
         exec "w"
         if &filetype == 'c'
-                exec "!clang % -o %<.exe"
-                exec "!gdb %<.exe"
+                exec "!clang % -o %<"
+                exec "!gdb %<"
         elseif &filetype == 'cpp'
-                exec "!g++ % -o %<.exe"
-                exec "!gdb %<.exe"
+                exec "!g++ % -o %<"
+                exec "!gdb %<"
         endif
 endfunc
 
