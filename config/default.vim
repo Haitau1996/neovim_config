@@ -32,7 +32,7 @@
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "   设置 swap 文件的位置
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-    set dir=/home/chenht/.config/nvim/swap
+    set dir=/home/chenht/.vim/swap
 
 " enable auto format
         nnoremap <F6> :Autoformat<CR>
@@ -167,7 +167,7 @@ endfunc
 	\   'python': ['pylint'],
 	\}
     let g:ale_c_cc_options = '-Wall -Werror -Wextra -std=c11'
-    let g:ale_cpp_cc_options = '-Wall -Werror -Wextra -std=c++17'
+    let g:ale_cpp_cc_options = '-Wall -Werror -Wextra -std=c++20'
     let g:ale_cpp_clangcheck_executable = 'clang-check'
     let g:ale_cpp_cppcheck_executable = 'cppcheck'
     "普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
