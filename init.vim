@@ -1,5 +1,4 @@
-let $my_vimdir = '~/.config/nvim'
-source $my_vimdir/config/default.vim
+source ~/.config/nvim/config/default.vim
 
 call plug#begin('~/.vim/plugged')
 

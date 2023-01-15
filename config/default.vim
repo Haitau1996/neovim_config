@@ -32,7 +32,7 @@
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "   设置 swap 文件的位置
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-    set dir=/home/chenht/.vim/swap
+    set dir=~/.vim/swap
 
 " enable auto format
         nnoremap <F6> :Autoformat<CR>
