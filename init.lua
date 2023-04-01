@@ -3,3 +3,5 @@ require('packer').startup(function()
     use {'neoclide/coc.nvim', branch = 'release'}
     use {'wbthomason/packer.nvim'}
 end)
+
+require('basic')
