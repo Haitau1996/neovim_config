@@ -13,6 +13,5 @@ vim.g.airline_powerline_fonts = 1
 vim.o.mouse = 'a'
 -- 设置 tab 大小
 vim.opt.tabstop = 4
-vim.opt.shiftwith = 4
 vim.opt.softtabstop = 0
 vim.opt.expandtab = true
