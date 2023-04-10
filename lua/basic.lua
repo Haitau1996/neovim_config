@@ -14,4 +14,9 @@ vim.o.mouse = 'a'
 -- 设置 tab 大小
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 0
+vim.opt_local.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.cursorline = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.o.incsearch = true
