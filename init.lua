@@ -13,6 +13,7 @@ require('packer').startup(function()
 		}
 	  end
 	}
+    use {'junegunn/fzf'}
     use {'junegunn/fzf.vim'}
     use {'neoclide/coc.nvim', branch = 'release'}
     use {'scrooloose/nerdtree'}
