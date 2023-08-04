@@ -10,6 +10,7 @@ require('packer').startup(function()
     use {'scrooloose/nerdtree'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-fugitive'}
+    use {'tpope/vim-rails'}
     use {'tpope/vim-surround'}
     use {'vim-airline/vim-airline'}
     use {'vim-airline/vim-airline-themes'}
