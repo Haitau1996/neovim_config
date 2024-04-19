@@ -4,6 +4,7 @@ require('packer').startup(function()
     use {'fatih/vim-go'}
     use {'junegunn/fzf'}
     use {'junegunn/fzf.vim'}
+    use {'mechatroner/rainbow_csv'}
     use {'neoclide/coc.nvim', branch = 'release'}
     use {'neovim/nvim-lspconfig'}
     use {'nvim-treesitter/nvim-treesitter'}
