@@ -1,0 +1,23 @@
+{
+  "ale": { "branch": "master", "commit": "d19b238aa2d7c426e71c5de083bd61328d5c4fd4" },
+  "coc.nvim": { "branch": "release", "commit": "e159d0b26277c579552fd7e171c2bf1712f0f00e" },
+  "fzf": { "branch": "master", "commit": "194a763c469e4fdbf31c0f71b1846add607477de" },
+  "fzf.vim": { "branch": "master", "commit": "269c08641ed5a842a19c03ca14e3eac3ac7ea74b" },
+  "lazy.nvim": { "branch": "main", "commit": "bef521ac89c8d423f9d092e37b58e8af0c099309" },
+  "neoconf.nvim": { "branch": "main", "commit": "ba3503e246ea687732e51f7f9878e653e2e2039b" },
+  "neodev.nvim": { "branch": "main", "commit": "ce9a2e8eaba5649b553529c5498acb43a6c317cd" },
+  "nerdtree": { "branch": "master", "commit": "f3a4d8eaa8ac10305e3d53851c976756ea9dc8e8" },
+  "nvim-lspconfig": { "branch": "master", "commit": "7133e85c3df14a387da8942c094c7edddcdef309" },
+  "nvim-treesitter": { "branch": "master", "commit": "dbbaa3f66e736a8e446572e1079ffa2f6d40b266" },
+  "packer.nvim": { "branch": "master", "commit": "ea0cc3c59f67c440c5ff0bbe4fb9420f4350b9a3" },
+  "vim-airline": { "branch": "master", "commit": "ff0f9a45a5d81d2c8aa67601c264b18c4fe26b15" },
+  "vim-airline-themes": { "branch": "master", "commit": "a9aa25ce323b2dd04a52706f4d1b044f4feb7617" },
+  "vim-commentary": { "branch": "master", "commit": "c4b8f52cbb7142ec239494e5a2c4a512f92c4d07" },
+  "vim-fugitive": { "branch": "master", "commit": "dac8e5c2d85926df92672bf2afb4fc48656d96c7" },
+  "vim-gitgutter": { "branch": "main", "commit": "67ef116100b40f9ca128196504a2e0bc0a2753b0" },
+  "vim-go": { "branch": "master", "commit": "feef9b31507f8e942bcd21f9e1f22d587c83c72d" },
+  "vim-rails": { "branch": "master", "commit": "8972461e64c7c4bf049f2f86ea1bc571e8077b55" },
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
+  "vimcdoc": { "branch": "master", "commit": "109d2cddd6d15297152c8ab8a4bc55a392b926cf" },
+  "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
+}

@@ -1,21 +1,35 @@
-require('packer').startup(function()
-    use {'airblade/vim-gitgutter'}
-    use {'dense-analysis/ale'}
-    use {'fatih/vim-go'}
-    use {'junegunn/fzf'}
-    use {'junegunn/fzf.vim'}
-    use {'neoclide/coc.nvim', branch = 'release'}
-    use {'neovim/nvim-lspconfig'}
-    use {'nvim-treesitter/nvim-treesitter'}
-    use {'scrooloose/nerdtree'}
-    use {'tpope/vim-commentary'}
-    use {'tpope/vim-fugitive'}
-    use {'tpope/vim-rails'}
-    use {'tpope/vim-surround'}
-    use {'vim-airline/vim-airline'}
-    use {'vim-airline/vim-airline-themes'}
-    use {'wbthomason/packer.nvim'}
-    use {'yianwillis/vimcdoc'}
-end)
-
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+require("lazy").setup({
+    {"folke/which-key.nvim"},
+    {"folke/neoconf.nvim", cmd = "Neoconf"},
+    {"folke/neodev.nvim"},
+    {'airblade/vim-gitgutter'},
+    {'dense-analysis/ale'},
+    {'fatih/vim-go'},
+    {'junegunn/fzf'},
+    {'junegunn/fzf.vim'},
+    {'neoclide/coc.nvim', branch = 'release'},
+    {'neovim/nvim-lspconfig'},
+    {'nvim-treesitter/nvim-treesitter'},
+    {'scrooloose/nerdtree'},
+    {'tpope/vim-commentary'},
+    {'tpope/vim-fugitive'},
+    {'tpope/vim-rails'},
+    {'tpope/vim-surround'},
+    {'vim-airline/vim-airline'},
+    {'vim-airline/vim-airline-themes'},
+    {'wbthomason/packer.nvim'},
+    {'yianwillis/vimcdoc'},
+})
 require('basic')
