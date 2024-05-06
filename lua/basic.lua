@@ -9,6 +9,16 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 -- 启用 powerline
 vim.g.airline_powerline_fonts = 1
+vim.g.airline_left_sep = ''
+vim.g.airline_left_alt_sep = ''
+vim.g.airline_right_sep = ''
+vim.g.airline_right_alt_sep = ''
+vim.g.airline_symbols.branch = ''
+vim.g.airline_symbols.colnr = ' ℅:'
+vim.g.airline_symbols.readonly = ''
+vim.g.airline_symbols.linenr = ' :'
+vim.g.airline_symbols.maxlinenr = '☰ '
+vim.g.airline_symbols.dirty='⚡'
 -- 启用鼠标支持
 vim.o.mouse = 'a'
 -- 设置 tab 大小
