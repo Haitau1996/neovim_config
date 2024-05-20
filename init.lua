@@ -24,6 +24,7 @@ require("lazy").setup({
       opts = {},
     },
     {'junegunn/fzf.vim'},
+    {'mechatroner/rainbow_csv'},
     {'neoclide/coc.nvim', branch = 'release'},
     {'neovim/nvim-lspconfig'},
     {'nvim-treesitter/nvim-treesitter'},
