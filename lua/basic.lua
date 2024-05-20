@@ -31,15 +31,12 @@ vim.opt.cursorline = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
--- Better window navigation
---vim.cmd(
---   [[inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"]]
---)
 local keyset = vim.keymap.set
 vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
 vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
+vim.cmd[[colorscheme tokyonight]]
 -- Autocomplete
 function _G.check_back_space()
     local col = vim.fn.col('.') - 1

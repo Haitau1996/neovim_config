@@ -15,9 +15,14 @@ require("lazy").setup({
     {"folke/neoconf.nvim", cmd = "Neoconf"},
     {"folke/neodev.nvim"},
     {'airblade/vim-gitgutter'},
-    {'dense-analysis/ale'},
     {'fatih/vim-go'},
     {'junegunn/fzf'},
+    {
+      "folke/tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
+    },
     {'junegunn/fzf.vim'},
     {'neoclide/coc.nvim', branch = 'release'},
     {'neovim/nvim-lspconfig'},
@@ -30,6 +35,5 @@ require("lazy").setup({
     {'vim-airline/vim-airline'},
     {'vim-airline/vim-airline-themes'},
     {'wbthomason/packer.nvim'},
-    {'yianwillis/vimcdoc'},
 })
 require('basic')
