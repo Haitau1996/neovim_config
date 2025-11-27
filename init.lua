@@ -49,7 +49,7 @@ require("lazy").setup({ -- === 核心开发体验优化 ===
 }, {
     'nvim-treesitter/nvim-treesitter',
     build = ":TSUpdate"
-}, -- === LSP 核心三件套 (解决报错的关键) ===
+},
 {
     "neovim/nvim-lspconfig",
     dependencies = {"williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp"},
