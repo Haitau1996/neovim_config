@@ -26,6 +26,18 @@ require("lazy").setup({ -- === 核心开发体验优化 ===
     lazy = true
 }, -- 配合 lazydev
 -- === UI 与 工具 ===
+{
+    'mfussenegger/nvim-dap',
+    dependencies = {
+        'rcarriga/nvim-dap-ui',
+        'theHamsta/nvim-dap-virtual-text',
+    },
+},
+{
+    'leoluz/nvim-dap-go',
+    ft = 'go',
+    dependencies = {'mfussenegger/nvim-dap'},
+},
 {"folke/which-key.nvim"}, {'airblade/vim-gitgutter'}, {
     'junegunn/fzf',
     build = "./install --all"
@@ -63,7 +75,7 @@ require("lazy").setup({ -- === 核心开发体验优化 ===
         -- 3. 使用 Mason-LSPConfig 的 handlers 自动配置
         -- 这是目前最稳妥的写法，它会自动处理 setup 调用，避免你手动写 lspconfig.setup 导致报错
         require("mason-lspconfig").setup({
-            ensure_installed = {"clangd", "lua_ls", "rust_analyzer"}, -- 自动安装 C++ 和 Lua 服务
+            ensure_installed = {"clangd", "lua_ls", "rust_analyzer", "gopls"}, -- 自动安装 C++、Lua、Rust 和 Go 服务
             handlers = {
                 -- 默认处理器：适用于大多数语言
                 function(server_name)
@@ -145,6 +157,41 @@ require("lazy").setup({ -- === 核心开发体验优化 ===
                             }
                         }
                     })
+                end,
+
+                -- === 新增：Go 专用配置 ===
+                ["gopls"] = function()
+                    require("lspconfig").gopls.setup({
+                        capabilities = capabilities,
+                        settings = {
+                            gopls = {
+                                analyses = {
+                                    unusedparams = true,
+                                },
+                                staticcheck = true,
+                                gofumpt = true,
+                                codelenses = {
+                                    gc_details = false,
+                                    generate = true,
+                                    regenerate_cgo = true,
+                                    run_govulncheck = true,
+                                    test = true,
+                                    tidy = true,
+                                    upgrade_dependency = true,
+                                    vendor = true,
+                                },
+                                hints = {
+                                    assignVariableTypes = true,
+                                    compositeLiteralFields = true,
+                                    compositeLiteralTypes = true,
+                                    constantValues = true,
+                                    functionTypeParameters = true,
+                                    parameterNames = true,
+                                    rangeVariableTypes = true,
+                                },
+                            },
+                        },
+                    })
                 end
             }
         })
@@ -214,9 +261,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
         vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, opts)
         vim.keymap.set('n', '<space>f', function()
-            vim.lsp.buf.format {
-                async = true
-            }
+            if vim.bo.filetype == 'go' then
+                -- Go 使用 gofumpt 格式化（更严格）
+                vim.cmd('GoFmt')
+            else
+                vim.lsp.buf.format({
+                    async = true
+                })
+            end
         end, opts)
 
         -- 错误诊断跳转
@@ -233,3 +285,37 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 -- 加载你原来的旧配置 (如果有的话)
 require('basic')
+
+-- ===========================================
+-- 4. 调试器配置 (DAP)
+-- ===========================================
+require('dap-go').setup()
+require('dapui').setup()
+
+vim.keymap.set('n', '<F5>', function()
+    require('dap').continue()
+end)
+vim.keymap.set('n', '<F10>', function()
+    require('dap').step_over()
+end)
+vim.keymap.set('n', '<F11>', function()
+    require('dap').step_into()
+end)
+vim.keymap.set('n', '<F12>', function()
+    require('dap').step_out()
+end)
+vim.keymap.set('n', '<leader>b', function()
+    require('dap').toggle_breakpoint()
+end)
+vim.keymap.set('n', '<leader>B', function()
+    require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))
+end)
+vim.keymap.set('n', '<leader>dr', function()
+    require('dap').repl.open()
+end)
+vim.keymap.set('n', '<leader>dl', function()
+    require('dap').run_last()
+end)
+vim.keymap.set('n', '<leader>du', function()
+    require('dapui').toggle()
+end)
