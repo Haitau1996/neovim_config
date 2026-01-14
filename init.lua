@@ -29,7 +29,10 @@ require("lazy").setup({ -- === 核心开发体验优化 ===
 {
     'mfussenegger/nvim-dap',
     dependencies = {
-        'rcarriga/nvim-dap-ui',
+        {
+            'rcarriga/nvim-dap-ui',
+            dependencies = { 'nvim-neotest/nvim-nio' },
+        },
         'theHamsta/nvim-dap-virtual-text',
     },
 },
